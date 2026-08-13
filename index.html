@@ -57,6 +57,9 @@ h1{text-shadow:0 5px 20px #0005}
 </style>
 </head>
 <body>
+<audio id="birthdayMusic" preload="auto" loop>
+  <source src="Muskurane_ki_Wajah_Tum_ho__Slowed___Reverb_(256k).mp3" type="audio/mpeg">
+</audio>
 
 <!-- 1. SURPRISE + COUNTDOWN -->
 <section id="intro" class="screen intro">
@@ -137,6 +140,7 @@ const gift=document.getElementById("gift");
 const cakeScreen=document.getElementById("cakeScreen");
 const wishScreen=document.getElementById("wishScreen");
 const messageScreen=document.getElementById("messageScreen");
+const birthdayMusic=document.getElementById("birthdayMusic");
 
 let number=5;
 const countdown=setInterval(()=>{
@@ -150,6 +154,7 @@ const countdown=setInterval(()=>{
 },1000);
 
 gift.addEventListener("click",()=>{
+  birthdayMusic.play().catch(()=>{});
   giftScreen.classList.add("hidden");
   cakeScreen.classList.remove("hidden");
 
