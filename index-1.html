@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Birthday Surprise ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;min-height:100%;font-family:Arial,Helvetica,sans-serif}
+body{
+  color:#fff;overflow:hidden;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3,#c471ed,#f64f59);
+  background-size:400% 400%;animation:bg 10s ease infinite
+}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.screen{width:100%;height:100vh;height:100dvh;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+.hidden{display:none!important}
+h1{text-shadow:0 5px 20px #0005}
+.intro h1{font-size:clamp(32px,9vw,60px);margin-bottom:18px}
+.intro p{font-size:20px;margin-bottom:15px}
+#count{font-size:clamp(90px,25vw,150px);font-weight:bold;animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.15)}}
+
+#giftScreen h1{font-size:clamp(32px,8vw,55px);margin-bottom:14px}
+.sub{font-size:20px;margin-bottom:30px}
+#gift{font-size:clamp(135px,40vw,220px);cursor:pointer;animation:bounce 1.2s infinite;filter:drop-shadow(0 20px 20px #0005)}
+@keyframes bounce{50%{transform:translateY(-20px) rotate(-4deg)}}
+.tap{margin-top:20px;font-size:18px}
+
+#cakeScreen{background:linear-gradient(135deg,#ff8a9b,#c471ed)}
+.cake{font-size:clamp(140px,42vw,230px);animation:pop 1s ease}
+.cakeText{font-size:clamp(38px,10vw,60px);margin-top:15px}
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.18)}100%{transform:scale(1)}}
+
+#wishScreen h1{font-size:clamp(30px,8vw,55px);margin-bottom:18px}
+#wishScreen p{font-size:22px}
+
+#messageScreen{width:100%;height:100vh;overflow-y:auto;padding:35px 18px 55px}
+.message{max-width:720px;margin:auto;text-align:center}
+.topHeart{font-size:70px;animation:heartbeat 1.2s infinite}
+@keyframes heartbeat{50%{transform:scale(1.15)}}
+.message>h1{font-size:clamp(38px,10vw,65px);margin:10px 0 15px}
+.subtitle{font-size:20px;margin-bottom:25px}
+.card{
+ background:rgba(255,255,255,.17);border:1px solid rgba(255,255,255,.3);
+ backdrop-filter:blur(15px);border-radius:28px;padding:28px 22px;
+ text-align:left;font-size:17px;line-height:1.8;box-shadow:0 20px 50px #0003
+}
+.card p{margin-bottom:20px}
+.sorry{background:rgba(255,255,255,.12);padding:20px;border-radius:20px;text-align:center;margin:25px 0}
+.sorry h2{margin-bottom:12px}
+.final{border-top:1px solid rgba(255,255,255,.3);padding-top:20px;text-align:center}
+.final h2{font-size:30px;margin-bottom:15px}
+.signature{text-align:center;font-size:14px;opacity:.85;margin-top:25px}
+.heart{position:fixed;bottom:-40px;z-index:100;pointer-events:none;animation:floatHeart linear forwards}
+@keyframes floatHeart{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<!-- 1. SURPRISE + COUNTDOWN -->
+<section id="intro" class="screen intro">
+  <div>
+    <h1>🎂 I HAVE A SURPRISE FOR YOU</h1>
+    <p>Get ready...</p>
+    <div id="count">5</div>
+  </div>
+</section>
+
+<!-- 2. GIFT -->
+<section id="giftScreen" class="screen hidden">
+  <div>
+    <h1>🎁 YOUR BIRTHDAY GIFT</h1>
+    <p class="sub">I made this special for you ❤️</p>
+    <div id="gift" aria-label="Tap the gift box">🎁</div>
+    <p class="tap">Tap the gift box ❤️</p>
+  </div>
+</section>
+
+<!-- 3. CAKE + FOR YOU -->
+<section id="cakeScreen" class="screen hidden">
+  <div>
+    <div class="cake">🎂</div>
+    <h2 class="cakeText">For you ❤️</h2>
+  </div>
+</section>
+
+<!-- 4. BIRTHDAY WISH -->
+<section id="wishScreen" class="screen hidden">
+  <div>
+    <h1>A BIRTHDAY WISH FOR YOU</h1>
+    <p>❤️</p>
+  </div>
+</section>
+
+<!-- 5. HAPPY BIRTHDAY + MESSAGE -->
+<section id="messageScreen" class="hidden">
+  <div class="message">
+    <div class="topHeart">❤️</div>
+    <h1>Happy Birthday! 🎂</h1>
+    <p class="subtitle">A Little Message From My Heart To Yours......</p>
+
+    <div class="card">
+      <p>Today is your special day, and I sincerely pray that Allah blesses you with a long, healthy, and happy life.</p>
+      <p>May He fill your heart with peace, your days with happiness, and your future with endless success.</p>
+      <p>I hope every dream you work for comes true, and that you continue to achieve great things in every step of your life. <strong>Ameen. 🤲❤️</strong></p>
+      <p>I genuinely pray that Allah opens the doors of success for you, gives you strength to overcome every difficulty, and blesses you with opportunities that take you closer to everything you wish for.</p>
+
+      <div class="sorry">
+        <h2>🥺 I'm Sorry</h2>
+        <p>I know we haven't always had the easiest relationship. We've had misunderstandings, disagreements, and many arguments.</p>
+        <p>If I have ever hurt you through my words or my actions, I want to say that I am truly sorry.</p>
+        <p>It was never my intention to cause you pain. ❤️</p>
+      </div>
+
+      <p>No matter what has happened between us, I genuinely wish nothing but the best for you.</p>
+      <p>You deserve happiness, success, good health, peace, and countless beautiful moments in life.</p>
+      <p>Thank you for being a part of my life. I hope this new year of your life brings you more smiles than tears, more victories than struggles, and more blessings than you could ever imagine.</p>
+
+      <div class="final">
+        <h2>❤️ Happy Birthday Once Again ❤️</h2>
+        <p>May Allah always protect you, guide you, keep you happy, and grant you success in everything you do.</p>
+        <p>May your future be bright, peaceful, successful, and full of beautiful moments.</p>
+        <p><strong>Ameen. 🤲❤️</strong></p>
+      </div>
+
+      <div class="signature">Made with love ❤️ from Hijab Batool</div>
+    </div>
+  </div>
+</section>
+
+<script>
+const intro=document.getElementById("intro");
+const count=document.getElementById("count");
+const giftScreen=document.getElementById("giftScreen");
+const gift=document.getElementById("gift");
+const cakeScreen=document.getElementById("cakeScreen");
+const wishScreen=document.getElementById("wishScreen");
+const messageScreen=document.getElementById("messageScreen");
+
+let number=5;
+const countdown=setInterval(()=>{
+  number--;
+  count.textContent=number;
+  if(number<=0){
+    clearInterval(countdown);
+    intro.classList.add("hidden");
+    giftScreen.classList.remove("hidden");
+  }
+},1000);
+
+gift.addEventListener("click",()=>{
+  giftScreen.classList.add("hidden");
+  cakeScreen.classList.remove("hidden");
+
+  setTimeout(()=>{
+    cakeScreen.classList.add("hidden");
+    wishScreen.classList.remove("hidden");
+
+    setTimeout(()=>{
+      wishScreen.classList.add("hidden");
+      messageScreen.classList.remove("hidden");
+      startHearts();
+    },2500);
+  },2500);
+});
+
+function startHearts(){
+  setInterval(()=>{
+    const heart=document.createElement("div");
+    heart.className="heart";
+    const emojis=["❤️","💕","💗","💖","💓"];
+    heart.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(20+Math.random()*25)+"px";
+    heart.style.animationDuration=(4+Math.random()*3)+"s";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),7000);
+  },350);
+}
+</script>
+</body>
+</html>
